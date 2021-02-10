@@ -1,0 +1,87 @@
+ECMAScript surgiu em 2015 -> Padronização da linguagem
+ecma international --> encontrar especificações da linguagem na internet
+
+literal --> valor literal que não é armazenado em uma variável
+
+VARIABLES:
+    
+    * A variável "let" não pode redeclarar uma mesma variável
+    * Esse problema não ocorre com "var"
+    obs: procurar usar o "let" (mais seguro)
+
+    * const não pode ser redeclarada nem modificada por métodos.
+    obs: métodos retornam valores calculados em cima de uma const, mas a variável
+    permanece intacta.
+
+NUMBERS:
+
+  Float types:
+    
+    toFixed(2) --> formata o tipo float para 2 casas decimais depois da 
+    vírgula
+
+  Infinity:
+    qualquer número dividido por zero no JS
+
+  Aritmética com strings:
+    Obs: o JavaScript entende uma string "10" como número inteiro se passada para
+    uma equação. ex. console.log("10" / 2) = 5 type = number
+
+  type NaN (not a number):
+    console.log("show" * 2) = NaN
+
+  Object Math:
+    Usar exponenciação
+
+STRINGS:
+
+  Concatenar string numérica e um número, resultará numa concatenação de strings
+  pois ela tem prioridade sobre números.
+  ex: console.log("3" + 2) = 32
+
+  Template String:
+
+    Uso de ` `  <-- 'crase' para concatenar strings.
+    Aceita variáveis e expressões utilizando o '${variable}' e respeita quebra de 
+    linhas com 'ENTER'. Ele é bem mais flexível do que as outras técnicas de string.
+
+BOOLEAN:
+
+  false && true
+
+OBJECTS:
+
+  Objetos no JS são como dicionários no Python
+  Chave / Valor 
+  Os valores são chamados também de "atributos"
+
+VARIÁVEIS:
+
+  var --> escopo aberto. Pode ser acessada fora do bloco de código, a menos que 
+  ela tenha sido declarada anteriormente dentro de uma função ou classe.
+  Caso seja declarada uma variável com o mesmo nome que uma variável de escopo fe-
+  chado usada anteriormente, o JavaScript irá criar uma variável totalmente nova
+  e a ela poderá ser atribuído um mesmo valor.
+  No devtools(browser), caso uma variável "variable" do tipo var seja declarada 
+  fora de uma função ou classe, ela poderá ser acessada como uma variável global 
+  pelo método "window.variable" (SEMPRE EVITAR!!! SEGURANÇA WEB)
+
+  let --> escopo fechado. Só é acessado dentro do escopo a que foi referenciada.
+
+HOISTING: significa içar ou levantar -->
+
+  A maioria das linguagens trabalha com a declaração implícita de variáveis antes 
+  de a ela ser atribuída qualquer função ou expressão.
+  No JavaScript, variáveis do tipo 'var' podem ser referenciadas depois e sofrerão
+  hoisting que é o içamento (pra cima) e a linguagem conseguirá 'resolver' a questão
+  de escopo (inclusive dentro de um bloco de função). ex. ***hoisting.js
+
+FUNÇÃO VS. OBJETOS:
+
+    Classes no JS são sintatic sugar para definição de função
+    Caso vc instancie essa função com o método 'new', essa função se transforma
+  em um objeto.
+  objetos no js são instanciados por função
+    Caso seja referenciado um objeto literal com a = {} <-- (chave e valor), 
+  teremos uma instância de objeto diretamente.
+    A função seria como um 'molde' de objetos.

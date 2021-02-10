@@ -1,0 +1,33 @@
+{
+  "name": "exerciciotdd",
+  "version": "1.0.0",
+  "description": "Pequeno projeto destinado à aprendizagem de teste unitário automatizado usando o Mocka e padrão modular n-tier",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "npx mocha --parallel --exit test/",
+    "test:dev": "npx mocha test/ -w",
+    "test:cov": "npx nyc --reporter=html --reporter=text mocha --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ovnny/exercicioTDD.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ovnny/exercicioTDD/issues"
+  },
+  "homepage": "https://github.com/ovnny/exercicioTDD#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "lokijs": "^1.5.11",
+    "mocha": "^8.2.1",
+    "nyc": "^15.1.0",
+    "sinon": "^9.2.4"
+  }
+}
